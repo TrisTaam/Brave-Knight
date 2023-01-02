@@ -4,19 +4,23 @@ template <class T>
 class CSingleton{
 public:
 	static T* GetInstance(){
-		if (s_instance == nullptr) s_instance = new T();
+		if (s_instance == nullptr) {
+			s_instance = new T();
+		}
 		return s_instance;
 	}
 
-	static bool HasInstance(){
+	static bool HasInstance() {
 		return s_instance != 0;
 	}
-	static void FreeInstance(){
-		if (s_instance) delete s_instance;
+	static void FreeInstance() {
+		if (s_instance) {
+			delete s_instance;
+		}
 	}
 protected:
-	CSingleton(){}
-	virtual ~CSingleton(){
+	CSingleton() {}
+	virtual ~CSingleton() {
 		delete s_instance;
 	}
 private:
