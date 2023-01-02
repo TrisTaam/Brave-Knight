@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GameManager">
+      <UniqueIdentifier>{3877f079-83e9-4298-9077-eb26d8414447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameStateManager">
+      <UniqueIdentifier>{b1491a32-6459-4f4d-8745-38495295aafb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject">
+      <UniqueIdentifier>{2887efab-8713-4549-b5d9-8d1c71039cb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Arrow">
+      <UniqueIdentifier>{399a13bb-e362-4545-8dc9-ceca49ac46d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Player">
+      <UniqueIdentifier>{51f9164d-bfb8-47ef-a8c4-534c898751a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Bullet">
+      <UniqueIdentifier>{cfdd302d-d1fa-495d-939a-a2e63e6face5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Cursor">
+      <UniqueIdentifier>{fa4d9128-af66-4ace-9f5c-b5dd3baf0721}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Gun">
+      <UniqueIdentifier>{aa1a981f-e5f8-4cfa-b006-e1f4595ef918}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Map">
+      <UniqueIdentifier>{fa718c5a-9914-4e7e-b891-2d515b6637a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Map\Tile">
+      <UniqueIdentifier>{919534a1-2ad2-418f-9e97-18e2bfc7b90f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Component">
+      <UniqueIdentifier>{78fda3e2-4655-4d03-a239-7d42956562b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Component\Animation">
+      <UniqueIdentifier>{130de1c2-9cf8-4888-9548-2aec06add7b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Component\GameButton">
+      <UniqueIdentifier>{77b816bb-119d-4331-aed1-9d3db83e20a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Component\HitBox">
+      <UniqueIdentifier>{e5ab23b0-f75c-4ef9-954c-4429c336ae3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\StrongHold">
+      <UniqueIdentifier>{663a26aa-b150-47c9-998f-19216301d7ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Creep">
+      <UniqueIdentifier>{38a7aac0-4dbe-4239-a07b-9c670ae093b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Component\Collider">
+      <UniqueIdentifier>{ab924bbf-b637-47ca-8331-4b640ba197c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Creep\Demon">
+      <UniqueIdentifier>{7114886f-7e8b-47cf-83c5-00f170d572e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Creep\Skeleton">
+      <UniqueIdentifier>{850139cc-99fa-483c-a219-509c984c7cc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Component\GameMath">
+      <UniqueIdentifier>{4367031c-b31c-4677-b7ce-a725d8d6d2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Wave">
+      <UniqueIdentifier>{36a1e51e-c254-4f2a-8c93-776342b5407d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Turret">
+      <UniqueIdentifier>{9dde8bd7-0e58-464a-9608-74946e40b0bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\UI">
+      <UniqueIdentifier>{b9da0e70-e146-43cd-b519-bbc21987da21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\UI\Notification">
+      <UniqueIdentifier>{db9f6854-70b4-40df-8bc1-64508bba0d78}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BraveKnight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameManager\ResourceManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GameStateMachine.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GameStateBase.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GSIntro.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GSMenu.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GSPlay.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GSEnd.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameManager\GameConnector.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameManager\CollisionManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Arrow\Arrow.cpp">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Arrow\ASAlert.cpp">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Arrow\ASNormal.cpp">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Bullet\Bullet.cpp">
+      <Filter>Source Files\GameObject\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Cursor\Cursor.cpp">
+      <Filter>Source Files\GameObject\Cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Gun\Gun.cpp">
+      <Filter>Source Files\GameObject\Gun</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Map\Map.cpp">
+      <Filter>Source Files\GameObject\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Map\Tile\Tile.cpp">
+      <Filter>Source Files\GameObject\Map\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Component\Animation\Animation.cpp">
+      <Filter>Source Files\GameObject\Component\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Component\GameButton\GameButton.cpp">
+      <Filter>Source Files\GameObject\Component\GameButton</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Component\HitBox\HitBox.cpp">
+      <Filter>Source Files\GameObject\Component\HitBox</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Player\Player.cpp">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Player\PSIdle.cpp">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Player\PSRun.cpp">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\StrongHold\StrongHold.cpp">
+      <Filter>Source Files\GameObject\StrongHold</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Component\Collider\Collider.cpp">
+      <Filter>Source Files\GameObject\Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\Skeleton\Skeleton.cpp">
+      <Filter>Source Files\GameObject\Creep\Skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\Skeleton\SSAttack.cpp">
+      <Filter>Source Files\GameObject\Creep\Skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\Skeleton\SSDeath.cpp">
+      <Filter>Source Files\GameObject\Creep\Skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\Skeleton\SSRun.cpp">
+      <Filter>Source Files\GameObject\Creep\Skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Component\GameMath\GameMath.cpp">
+      <Filter>Source Files\GameObject\Component\GameMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\Demon\Demon.cpp">
+      <Filter>Source Files\GameObject\Creep\Demon</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\Demon\DSAttack.cpp">
+      <Filter>Source Files\GameObject\Creep\Demon</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\Demon\DSDeath.cpp">
+      <Filter>Source Files\GameObject\Creep\Demon</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\Demon\DSRun.cpp">
+      <Filter>Source Files\GameObject\Creep\Demon</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Creep\ICreep.cpp">
+      <Filter>Source Files\GameObject\Creep</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Wave\Wave.cpp">
+      <Filter>Source Files\GameObject\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Turret\Turret.cpp">
+      <Filter>Source Files\GameObject\Turret</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameManager\WindowConnector.cpp">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\UI\UI.cpp">
+      <Filter>Source Files\GameObject\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\UI\Notification\INotification.cpp">
+      <Filter>Source Files\GameObject\UI\Notification</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\UI\Notification\WaveNotification.cpp">
+      <Filter>Source Files\GameObject\UI\Notification</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\UI\Notification\TurretNotification.cpp">
+      <Filter>Source Files\GameObject\UI\Notification</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GSPause.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GSHelp.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStateManager\GSHighScore.cpp">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\GameManager\Singleton.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameManager\ResourceManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Application.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameConfig.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GameStateBase.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GameStateMachine.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GSIntro.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GSMenu.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GSPlay.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GSEnd.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameManager\WindowConnector.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameManager\GameConnector.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameManager\CollisionManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Arrow\Arrow.h">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Arrow\ASAlert.h">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Arrow\ASNormal.h">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Arrow\IArrow.h">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Arrow\IAState.h">
+      <Filter>Source Files\GameObject\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Bullet\Bullet.h">
+      <Filter>Source Files\GameObject\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Cursor\Cursor.h">
+      <Filter>Source Files\GameObject\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Gun\Gun.h">
+      <Filter>Source Files\GameObject\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Map\Map.h">
+      <Filter>Source Files\GameObject\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Map\Tile\Tile.h">
+      <Filter>Source Files\GameObject\Map\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Component\Animation\Animation.h">
+      <Filter>Source Files\GameObject\Component\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Component\GameButton\GameButton.h">
+      <Filter>Source Files\GameObject\Component\GameButton</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Component\HitBox\HitBox.h">
+      <Filter>Source Files\GameObject\Component\HitBox</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Player\IPlayer.h">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Player\IPState.h">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Player\Player.h">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Player\PSIdle.h">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Player\PSRun.h">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\StrongHold\StrongHold.h">
+      <Filter>Source Files\GameObject\StrongHold</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Component\Collider\Collider.h">
+      <Filter>Source Files\GameObject\Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\ICreep.h">
+      <Filter>Source Files\GameObject\Creep</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\ICState.h">
+      <Filter>Source Files\GameObject\Creep</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\Skeleton\Skeleton.h">
+      <Filter>Source Files\GameObject\Creep\Skeleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\Skeleton\SSAttack.h">
+      <Filter>Source Files\GameObject\Creep\Skeleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\Skeleton\SSDeath.h">
+      <Filter>Source Files\GameObject\Creep\Skeleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\Skeleton\SSRun.h">
+      <Filter>Source Files\GameObject\Creep\Skeleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Component\GameMath\GameMath.h">
+      <Filter>Source Files\GameObject\Component\GameMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\Demon\Demon.h">
+      <Filter>Source Files\GameObject\Creep\Demon</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\Demon\DSAttack.h">
+      <Filter>Source Files\GameObject\Creep\Demon</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\Demon\DSDeath.h">
+      <Filter>Source Files\GameObject\Creep\Demon</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Creep\Demon\DSRun.h">
+      <Filter>Source Files\GameObject\Creep\Demon</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Wave\Wave.h">
+      <Filter>Source Files\GameObject\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Turret\Turret.h">
+      <Filter>Source Files\GameObject\Turret</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\UI\UI.h">
+      <Filter>Source Files\GameObject\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\UI\Notification\INotification.h">
+      <Filter>Source Files\GameObject\UI\Notification</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\UI\Notification\WaveNotification.h">
+      <Filter>Source Files\GameObject\UI\Notification</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\UI\Notification\TurretNotification.h">
+      <Filter>Source Files\GameObject\UI\Notification</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GSPause.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GSHelp.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStateManager\GSHighScore.h">
+      <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
