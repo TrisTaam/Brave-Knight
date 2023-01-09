@@ -13,9 +13,11 @@ Player::Player() {
 	m_currentState = m_idleState;
 	m_scale = sf::Vector2f(3.f * globalScale.x, 3.f * globalScale.y);
 	m_gun = new Gun();
+	m_skill = new Skill();
 	GConnector->SetGun(m_gun);
 	m_faceDir = 1;
 	m_HP = sf::Vector2i(1000, 1000);
+	m_fury = sf::Vector2i(0, 200);
 	m_coolDown = 0.5f;
 	m_coin = 0;
 }
@@ -66,7 +68,7 @@ void Player::Update(float deltaTime) {
 			else {
 				if (m_currentTime >= m_coolDown) {
 					m_currentTime = 0.f;
-					TurretNotification* notification = new TurretNotification();
+					GeneralNotification* notification = new GeneralNotification("You don't have enough coin to build a turret", 1.f);
 					notification->Init();
 					GConnector->GetUI()->GetListNotification()->push_back(notification);
 				}
@@ -75,8 +77,14 @@ void Player::Update(float deltaTime) {
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
 			if (m_currentTime >= m_coolDown) {
 				m_currentTime = 0.f;
-				for (int i = 0; i <= 359; ++i) {
-					GConnector->GetListBullet()->push_back(new Bullet(m_hitBox->getPosition(), (float)i, 0.f, 20));
+				if (m_fury.x < m_fury.y) {
+					GeneralNotification* notification = new GeneralNotification("You don't have enough fury to use skill", 1.f);
+					notification->Init();
+					GConnector->GetUI()->GetListNotification()->push_back(notification);
+				}
+				else {
+					m_skill->Do();
+					m_fury.x = 0;
 				}
 			}
 		}
@@ -114,6 +122,14 @@ int Player::GetFaceDir() {
 
 sf::Vector2i Player::GetHP() {
 	return m_HP;
+}
+
+void Player::SetFury(sf::Vector2i fury) {
+	m_fury = fury;
+}
+
+sf::Vector2i Player::GetFury() {
+	return m_fury;
 }
 
 void Player::TakeDame(int dame) {

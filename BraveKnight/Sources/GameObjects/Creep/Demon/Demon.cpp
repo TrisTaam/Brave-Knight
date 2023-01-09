@@ -36,6 +36,7 @@ ICState::STATE Demon::GetState() {
 }
 
 void Demon::Init() {
+	printf("%d %d\n", m_HP.x, m_HP.y);
 	m_hitBox = new HitBox(sf::Vector2i(40 * m_scale.x, 22 * m_scale.y));
 	m_hitBox->setOrigin(m_hitBox->getSize() / 2.f);
 	m_hitBox->Init(sf::Vector2f(200.f, 200.f));

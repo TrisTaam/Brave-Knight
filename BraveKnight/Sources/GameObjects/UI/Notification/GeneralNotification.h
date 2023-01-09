@@ -1,9 +1,10 @@
 #pragma once
 #include "INotification.h"
 
-class TurretNotification :public INotification {
+class GeneralNotification :public INotification {
 public:
-	TurretNotification();
+	GeneralNotification();
+	GeneralNotification(string notification, float coolDown);
 	void Init();
 	void Update(float deltaTime);
 	void Render(sf::RenderWindow* window);

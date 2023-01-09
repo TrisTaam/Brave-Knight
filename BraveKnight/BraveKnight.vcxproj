@@ -165,10 +165,11 @@
     <ClCompile Include="Sources\GameObjects\Player\Player.cpp" />
     <ClCompile Include="Sources\GameObjects\Player\PSIdle.cpp" />
     <ClCompile Include="Sources\GameObjects\Player\PSRun.cpp" />
+    <ClCompile Include="Sources\GameObjects\Skill\Skill.cpp" />
     <ClCompile Include="Sources\GameObjects\StrongHold\StrongHold.cpp" />
     <ClCompile Include="Sources\GameObjects\Turret\Turret.cpp" />
     <ClCompile Include="Sources\GameObjects\UI\Notification\INotification.cpp" />
-    <ClCompile Include="Sources\GameObjects\UI\Notification\TurretNotification.cpp" />
+    <ClCompile Include="Sources\GameObjects\UI\Notification\GeneralNotification.cpp" />
     <ClCompile Include="Sources\GameObjects\UI\Notification\WaveNotification.cpp" />
     <ClCompile Include="Sources\GameObjects\UI\UI.cpp" />
     <ClCompile Include="Sources\GameObjects\Wave\Wave.cpp" />
@@ -220,10 +221,11 @@
     <ClInclude Include="Sources\GameObjects\Player\Player.h" />
     <ClInclude Include="Sources\GameObjects\Player\PSIdle.h" />
     <ClInclude Include="Sources\GameObjects\Player\PSRun.h" />
+    <ClInclude Include="Sources\GameObjects\Skill\Skill.h" />
     <ClInclude Include="Sources\GameObjects\StrongHold\StrongHold.h" />
     <ClInclude Include="Sources\GameObjects\Turret\Turret.h" />
     <ClInclude Include="Sources\GameObjects\UI\Notification\INotification.h" />
-    <ClInclude Include="Sources\GameObjects\UI\Notification\TurretNotification.h" />
+    <ClInclude Include="Sources\GameObjects\UI\Notification\GeneralNotification.h" />
     <ClInclude Include="Sources\GameObjects\UI\Notification\WaveNotification.h" />
     <ClInclude Include="Sources\GameObjects\UI\UI.h" />
     <ClInclude Include="Sources\GameObjects\Wave\Wave.h" />

@@ -85,6 +85,9 @@
     <Filter Include="Source Files\GameObject\UI\Notification">
       <UniqueIdentifier>{db9f6854-70b4-40df-8bc1-64508bba0d78}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameObject\Skill">
+      <UniqueIdentifier>{30a27aa9-f1a4-4324-bb8b-c42952beeeae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BraveKnight.cpp">
@@ -216,7 +219,7 @@
     <ClCompile Include="Sources\GameObjects\UI\Notification\WaveNotification.cpp">
       <Filter>Source Files\GameObject\UI\Notification</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\GameObjects\UI\Notification\TurretNotification.cpp">
+    <ClCompile Include="Sources\GameObjects\UI\Notification\GeneralNotification.cpp">
       <Filter>Source Files\GameObject\UI\Notification</Filter>
     </ClCompile>
     <ClCompile Include="Sources\GameStateManager\GSPause.cpp">
@@ -227,6 +230,9 @@
     </ClCompile>
     <ClCompile Include="Sources\GameStateManager\GSHighScore.cpp">
       <Filter>Source Files\GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObjects\Skill\Skill.cpp">
+      <Filter>Source Files\GameObject\Skill</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -377,7 +383,7 @@
     <ClInclude Include="Sources\GameObjects\UI\Notification\WaveNotification.h">
       <Filter>Source Files\GameObject\UI\Notification</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\GameObjects\UI\Notification\TurretNotification.h">
+    <ClInclude Include="Sources\GameObjects\UI\Notification\GeneralNotification.h">
       <Filter>Source Files\GameObject\UI\Notification</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameStateManager\GSPause.h">
@@ -388,6 +394,9 @@
     </ClInclude>
     <ClInclude Include="Sources\GameStateManager\GSHighScore.h">
       <Filter>Source Files\GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObjects\Skill\Skill.h">
+      <Filter>Source Files\GameObject\Skill</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

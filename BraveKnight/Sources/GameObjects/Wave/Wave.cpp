@@ -45,7 +45,7 @@ void Wave::Update(float deltaTime) {
 			m_isClear = false;
 			m_creepPerPortal++;
 			m_isClear = false;
-			if (NUM_WAVE >= 3) {
+			if (NUM_WAVE >= 3 && NUM_WAVE < 10) {
 				SKELETON_HP.x += 10;
 				SKELETON_HP.y += 10;
 				DEMON_HP.x += 10;
@@ -62,6 +62,7 @@ void Wave::Update(float deltaTime) {
 		}
 	}
 	else {
+		sf::Vector2i fury = GConnector->GetPlayer()->GetFury();
 		if (!m_tmp->empty()) {
 			if (m_currentTime >= m_waitTime) {
 				m_currentTime = 0;
@@ -80,6 +81,9 @@ void Wave::Update(float deltaTime) {
 				it = m_listCreep->erase(it);
 				m_cnt++;
 				GConnector->GetPlayer()->SetCoin(GConnector->GetPlayer()->GetCoin() + 1);
+				if (fury.x < fury.y) {
+					GConnector->GetPlayer()->SetFury(sf::Vector2i(fury.x + 1, fury.y));
+				}
 			}
 			else {
 				++it;
@@ -88,7 +92,7 @@ void Wave::Update(float deltaTime) {
 		if (m_cnt == m_creepPerPortal * 8) {
 			m_isClear = true;
 			m_currentTime = 0;
-			WaveNotification* notification = new WaveNotification();
+			WaveNotification* notification = new WaveNotification(1.f);
 			notification->Init();
 			GConnector->GetUI()->GetListNotification()->push_back(notification);
 		}

@@ -5,6 +5,8 @@
 UI::UI() {
 	m_HPText = new sf::Text();
 	m_playerHealthBar = new sf::RectangleShape();
+	m_furyText = new sf::Text();
+	m_playerFuryBar = new sf::RectangleShape();
 	m_coinText = new sf::Text();
 	m_numCoinText1 = new sf::Text();
 	m_waveText = new sf::Text();
@@ -12,6 +14,7 @@ UI::UI() {
 	m_numCoinText2 = new sf::Text();
 	m_listNotification = new std::list<INotification*>;
 	m_fps = new sf::Text();
+	m_furyFull = new sf::Text();
 }
 
 void UI::Init() {
@@ -23,11 +26,21 @@ void UI::Init() {
 
 	m_playerHealthBar->setSize(sf::Vector2f(200.f, 20.f));
 	m_playerHealthBar->setFillColor(sf::Color::Red);
-	m_playerHealthBar->setPosition(m_HPText->getPosition().x + 30.f, m_HPText->getPosition().y + 20.f);
+	m_playerHealthBar->setPosition(m_HPText->getPosition().x + 50.f, m_HPText->getPosition().y + 20.f);
+
+	m_furyText->setString("Fury");
+	m_furyText->setFont(*ASSET->getFont("m5x7"));
+	m_furyText->setCharacterSize(30);
+	m_furyText->setFillColor(sf::Color::Blue);
+	m_furyText->setPosition(10.f, m_HPText->getPosition().y + 30.f);
+
+	m_playerFuryBar->setSize(sf::Vector2f(200.f, 20.f));
+	m_playerFuryBar->setFillColor(sf::Color::Blue);
+	m_playerFuryBar->setPosition(m_furyText->getPosition().x + 50.f, m_furyText->getPosition().y + 15.f);
 
 	m_coinText->setString("Coin: ");
 	m_coinText->setFont(*ASSET->getFont("m5x7"));
-	m_coinText->setPosition(m_HPText->getPosition().x, m_HPText->getPosition().y + 30.f);
+	m_coinText->setPosition(m_furyText->getPosition().x, m_furyText->getPosition().y + 30.f);
 
 	m_numCoinText1->setString(to_string(GConnector->GetPlayer()->GetCoin()));
 	m_numCoinText1->setFont(*ASSET->getFont("m5x7"));
@@ -49,6 +62,11 @@ void UI::Init() {
 	m_animation2 = new Animation(*ASSET->getTexture("Coin/Coin"), sf::Vector2i(5, 1), 0.1f);
 	m_animation2->setPosition(m_numCoinText2->getPosition().x + m_numCoinText2->getLocalBounds().width + 15.f, m_numCoinText2->getPosition().y + m_numCoinText2->getLocalBounds().height + 10.f);
 
+	m_furyFull->setString("The fury is full, skill is ready");
+	m_furyFull->setFont(*ASSET->getFont("m5x7"));
+	m_furyFull->setFillColor(sf::Color::Blue);
+	m_furyFull->setPosition(10.f, m_needCoinText->getPosition().y + 20.f);
+
 	m_waveText->setString("WAVE " + to_string(Wave::NUM_WAVE));
 	m_waveText->setFont(*ASSET->getFont("m5x7"));
 	m_waveText->setCharacterSize(50);
@@ -62,11 +80,18 @@ void UI::Init() {
 
 void UI::Update(float deltaTime) {
 	sf::Vector2i playerHP = GConnector->GetPlayer()->GetHP();
+	sf::Vector2i playerFury = GConnector->GetPlayer()->GetFury();
 	if (playerHP.x >= 0) {
 		m_playerHealthBar->setSize(sf::Vector2f(200.f * playerHP.x / playerHP.y, 20.f));
 	}
 	else {
 		m_playerHealthBar->setSize(sf::Vector2f(0.f, 20.f));
+	}
+	if (playerFury.x >= 0) {
+		m_playerFuryBar->setSize(sf::Vector2f(200.f * playerFury.x / playerFury.y, 20.f));
+	}
+	else {
+		m_playerFuryBar->setSize(sf::Vector2f(0.f, 20.f));
 	}
 	m_numCoinText1->setString(to_string(GConnector->GetPlayer()->GetCoin()));
 	m_animation1->setPosition(m_numCoinText1->getPosition().x + m_numCoinText1->getLocalBounds().width + 15.f, m_numCoinText1->getPosition().y + m_numCoinText1->getLocalBounds().height + 10.f);
@@ -77,7 +102,7 @@ void UI::Update(float deltaTime) {
 	float tmp = 0.f;
 	for (INotification* x : *m_listNotification) {
 		x->Update(deltaTime);
-		x->setPosition(260.f, m_playerHealthBar->getPosition().y - m_playerHealthBar->getSize().y / 2.f + tmp);
+		x->setPosition(280.f, m_playerHealthBar->getPosition().y - m_playerHealthBar->getSize().y / 2.f + tmp);
 		tmp += 20.f;
 	}
 	for (std::list<INotification*>::iterator it = m_listNotification->begin(); it != m_listNotification->end();) {
@@ -97,11 +122,16 @@ void UI::Update(float deltaTime) {
 void UI::Render(sf::RenderWindow* window) {
 	window->draw(*m_HPText);
 	window->draw(*m_playerHealthBar);
+	window->draw(*m_furyText);
+	window->draw(*m_playerFuryBar);
 	window->draw(*m_coinText);
 	window->draw(*m_numCoinText1);
 	window->draw(*m_animation1);
 	window->draw(*m_needCoinText);
 	window->draw(*m_numCoinText2);
+	if (GConnector->GetPlayer()->GetFury().x == GConnector->GetPlayer()->GetFury().y) {
+		window->draw(*m_furyFull);
+	}
 	window->draw(*m_animation2);
 	window->draw(*m_waveText);
 	window->draw(*m_fps);

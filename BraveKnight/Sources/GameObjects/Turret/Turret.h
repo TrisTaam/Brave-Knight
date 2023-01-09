@@ -8,6 +8,7 @@ public:
 	static int NUM_TURRET;
 	Turret();
 	Turret(sf::Vector2f position);
+	~Turret();
 	void Init();
 	void Update(float deltaTime);
 	void Render(sf::RenderWindow* window);

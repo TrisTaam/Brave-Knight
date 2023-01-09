@@ -1,6 +1,7 @@
 #pragma once
 #include "IPlayer.h"
 #include "../Gun/Gun.h"
+#include "../Skill/Skill.h"
 
 class Player :public IPlayer {
 public:
@@ -17,6 +18,8 @@ public:
 	void SetFaceDir(int faceDir);
 	int GetFaceDir();
 	sf::Vector2i GetHP();
+	void SetFury(sf::Vector2i fury);
+	sf::Vector2i GetFury();
 	void TakeDame(int dame);
 	void SetCoin(int coin);
 	int GetCoin();
@@ -31,8 +34,10 @@ private:
 	IPState* m_deathState;
 	sf::Vector2f m_scale;
 	Gun* m_gun;
+	Skill* m_skill;
 	int m_faceDir;
 	sf::Vector2i m_HP;
+	sf::Vector2i m_fury;
 	int m_coin;
 	float m_speed;
 	float m_coolDown;

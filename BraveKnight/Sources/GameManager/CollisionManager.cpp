@@ -153,14 +153,16 @@ void CollisionManager::CreepAndTurret() {
 	for (ICreep* x : *m_listCreep) {
 		if (x->GetHitBox()->IsAlive()) {
 			for (Turret* y : *m_listTurret) {
-				if (x->GetAttackAt() == NOTHING && x->GetCollider()->CheckCollision(y->GetCollider())) {
-					x->SetAttackAt(TURRET);
-					x->ChangeNextState(ICState::STATE_ATTACK);
-					x->SetTurretToAttack(y);
-				}
-				else if (x->GetAttackAt() == TAG::TURRET && x->GetTurretToAttack() == y && !x->GetCollider()->CheckCollision(y->GetCollider())) {
-					x->SetAttackAt(NOTHING);
-					x->ChangeNextState(ICState::STATE_RUN);
+				if (y->GetHitBox()->IsAlive()) {
+					if (x->GetAttackAt() == NOTHING && x->GetCollider()->CheckCollision(y->GetCollider())) {
+						x->SetAttackAt(TURRET);
+						x->ChangeNextState(ICState::STATE_ATTACK);
+						x->SetTurretToAttack(y);
+					}
+					else if (x->GetAttackAt() == TAG::TURRET && x->GetTurretToAttack() == y && !x->GetCollider()->CheckCollision(y->GetCollider())) {
+						x->SetAttackAt(NOTHING);
+						x->ChangeNextState(ICState::STATE_RUN);
+					}
 				}
 			}
 		}

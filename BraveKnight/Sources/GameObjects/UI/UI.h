@@ -1,7 +1,7 @@
 #include "../../GameManager/ResourceManager.h"
 #include "Notification/INotification.h"
 #include "Notification/WaveNotification.h"
-#include "Notification/TurretNotification.h"
+#include "Notification/GeneralNotification.h"
 
 class UI {
 public:
@@ -13,6 +13,8 @@ public:
 private:
 	sf::Text* m_HPText;
 	sf::RectangleShape* m_playerHealthBar;
+	sf::Text* m_furyText;
+	sf::RectangleShape* m_playerFuryBar;
 	sf::Text* m_coinText;
 	sf::Text* m_numCoinText1;
 	Animation* m_animation1;
@@ -22,4 +24,5 @@ private:
 	Animation* m_animation2;
 	std::list<INotification*>* m_listNotification;
 	sf::Text* m_fps;
+	sf::Text* m_furyFull;
 };

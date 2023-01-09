@@ -8,7 +8,6 @@ ICreep::ICreep() {
 ICreep::~ICreep() {
 	delete m_collider;
 	delete m_hitBox;
-	delete m_turretToAttack;
 	delete m_healthBar;
 }
 

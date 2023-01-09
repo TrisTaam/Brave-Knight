@@ -14,6 +14,8 @@ public:
 	virtual void TakeDame(int dame) = 0;
 	virtual void SetCoin(int coin) = 0;
 	virtual int GetCoin() = 0;
+	virtual void SetFury(sf::Vector2i fury) = 0;
+	virtual sf::Vector2i GetFury() = 0;
 	virtual sf::Vector2i GetHP() = 0;
 private:
 };

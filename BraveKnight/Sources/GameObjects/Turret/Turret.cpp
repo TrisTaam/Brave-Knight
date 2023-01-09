@@ -8,6 +8,9 @@ int Turret::NUM_TURRET = 0;
 Turret::Turret() {
 }
 
+Turret::~Turret() {
+}
+
 Turret::Turret(sf::Vector2f position) {
 	Turret::NUM_TURRET++;
 	m_sprite = new sf::Sprite();
