@@ -125,3 +125,7 @@ bool Turret::IsExplode() {
 sf::Vector2i Turret::GetHP() {
 	return m_HP;
 }
+
+sf::Vector2f Turret::GetScale() {
+	return m_scale;
+}

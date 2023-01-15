@@ -24,7 +24,7 @@ public:
 	void Move(float deltaTime);
 	int GetDame();
 	sf::Vector2i GetHP();
-	void takeDame(int dame);
+	void TakeDame(int dame);
 	void SetAttackAt(TAG tag);
 	TAG GetAttackAt();
 	void SetTurretToAttack(Turret* turret);

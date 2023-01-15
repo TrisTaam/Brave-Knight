@@ -19,6 +19,7 @@ public:
 	void TakeDame(int dame);
 	bool IsExplode();
 	sf::Vector2i GetHP();
+	sf::Vector2f GetScale();
 private:
 	sf::Vector2f m_position;
 	HitBox* m_hitBox;

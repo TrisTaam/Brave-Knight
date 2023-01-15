@@ -54,7 +54,7 @@ sf::Vector2i ICreep::GetHP() {
 	return m_HP;
 }
 
-void ICreep::takeDame(int dame) {
+void ICreep::TakeDame(int dame) {
 	m_HP.x -= dame;
 }
 

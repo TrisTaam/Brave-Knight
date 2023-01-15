@@ -104,7 +104,7 @@ void CollisionManager::BulletAndCreep() {
 					if (x->GetCollider()->CheckCollision(y->GetCollider())) {
 						x->GetHitBox()->SetAlive(false);
 						x->GetHitBox()->SetVelocity(sf::Vector2f(0.f, 0.f));
-						y->takeDame(x->GetDame());
+						y->TakeDame(x->GetDame());
 						break;
 					}
 				}
