@@ -20,6 +20,7 @@ Player::Player() {
 	m_fury = sf::Vector2i(0, 200);
 	m_coolDown = 0.5f;
 	m_coin = 0;
+	m_isUseSkill = false;
 }
 
 Player::~Player() {
@@ -83,12 +84,13 @@ void Player::Update(float deltaTime) {
 					GConnector->GetUI()->GetListNotification()->push_back(notification);
 				}
 				else {
-					m_skill->Do();
+					m_isUseSkill = true;
 					m_fury.x = 0;
 				}
 			}
 		}
 	}
+	if (m_isUseSkill) m_skill->Update(deltaTime);
 }
 
 void Player::Render(sf::RenderWindow* window) {
@@ -142,6 +144,10 @@ void Player::SetCoin(int coin) {
 
 int Player::GetCoin() {
 	return m_coin;
+}
+
+void Player::SetIsUseSkill(bool isUseSkill) {
+	m_isUseSkill = isUseSkill;
 }
 
 void Player::PerformStateChange(){

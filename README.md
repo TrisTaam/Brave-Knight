@@ -1,13 +1,13 @@
 # BraveKnight
-Press W, A, S, D to move your player
+Press <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd> to move your player
 
-Press right to build a turret
+Press <kbd>Right Click</kbd> to build a turret
 
-Press left click to shoot
+Press <kbd>Left Click</kbd> to shoot
 
-Press SPACE to use skill
+Press <kbd>SPACE</kbd> to use skill
 
-Press F to turn ON/OFF auto fire
+Press <kbd>F</kbd> to turn ON/OFF auto fire
 
 Note that: You will lose if your player die or your Strong Hold is destroyed
 

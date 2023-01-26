@@ -23,6 +23,7 @@ public:
 	void TakeDame(int dame);
 	void SetCoin(int coin);
 	int GetCoin();
+	void SetIsUseSkill(bool isUseSkill);
 private:
 	void PerformStateChange();
 	HitBox* m_hitBox;
@@ -42,4 +43,5 @@ private:
 	float m_speed;
 	float m_coolDown;
 	float m_currentTime;
+	bool m_isUseSkill;
 };

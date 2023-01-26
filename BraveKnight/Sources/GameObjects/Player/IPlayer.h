@@ -17,5 +17,6 @@ public:
 	virtual void SetFury(sf::Vector2i fury) = 0;
 	virtual sf::Vector2i GetFury() = 0;
 	virtual sf::Vector2i GetHP() = 0;
+	virtual void SetIsUseSkill(bool isUseSkill) = 0;
 private:
 };
